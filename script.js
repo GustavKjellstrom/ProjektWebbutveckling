@@ -1,3 +1,3 @@
 function clickfunktion(){
-    alert("Jag är Gustav")
+    alert("Hej Bijan! Välkommen till din webbsida.");
 }
