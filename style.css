@@ -1,33 +1,114 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .green-border {
-    background-color: green;
-    height: 25vh; 
-    width: 100%;
-    border-top: 4px solid black; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 10px; 
-    box-sizing: border-box; 
-  }
-  
-  .icon {
-    width: 40px; 
-    margin-right: 10px; 
-    }
-  
-  .title {
-    margin: 0;
-    padding: 10px;
-    color: white;
-    font-size: 3vh; 
-    font-family: 'Comic Sans MS', cursive;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+.green-border {
+  background-color: green;
+  height: 25vh;
+  width: 100%;
+  border-top: 4px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  font-size: 10vh;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: white;
+  border: 1px solid black;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dropdown-btn {
+  border: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-btn:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.show {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Adjust as needed */
+}
+
+.rectangle-border {
+  border: 2px solid grey;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: -1000px; /* Adjust to move the rectangle border to the left */
+  margin-top: 100px; 
+}
+
+
+.bank-account,
+.piggy-bank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-image {
+  width: 200px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.account-title {
+  margin: 0;
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.amount-section {
+  text-align: center;
+}
+
+.amount-title {
+  margin: 0;
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+.amount-text {
+  margin: 0;
+  font-size: 1.2rem; /* Adjust size as needed */
+  font-weight: bold;
+}

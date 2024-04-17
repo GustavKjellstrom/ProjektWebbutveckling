@@ -3,13 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Border</title>
+  <title>Bank</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="green-border">
-    <img src="icon.png" class="icon" alt="Hamburger Icon">
     <h1 class="title">Bank</h1>
+    <div class="dropdown">
+      <img src="icon.png" class="icon" alt="Hamburger Icon" id="dropdown-icon">
+      <div class="dropdown-menu" id="dropdown-menu">
+        <button class="dropdown-btn">Home</button>
+        <button class="dropdown-btn">Transactions</button>
+      </div>
+    </div>
   </div>
+
+  <div class="content">
+    <div class="rectangle-border">
+      <div class="bank-account">
+        <h2 class="account-title">Account</h2>
+        <img src="main_bank.png" class="bank-image" alt="Main Bank Account">
+        <div class="amount-section">
+          <h3 class="amount-title">Amount</h3>
+          <p class="amount-text">$10</p> <!-- Placeholder for amount -->
+        </div>
+      </div>
+      <div class="piggy-bank">
+        <h2 class="account-title">Piggy Bank</h2>
+        <img src="piggy_bank.png" class="bank-image" alt="Piggy Bank Card">
+        <div class="amount-section">
+          <h3 class="amount-title">Amount</h3>
+          <p class="amount-text">$5</p> <!-- Placeholder for amount -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle dropdown menu
+    document.getElementById("dropdown-icon").addEventListener("click", function() {
+      document.getElementById("dropdown-menu").classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
