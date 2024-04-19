@@ -7,15 +7,34 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dropdown">
-        <span>dropdown</span>
-        <div class="dropdown-content">
-        <a class="dropdown-content-ind" href="http://127.0.0.1:5500/ProjektWebbutveckling/sport.html/">uppdaterar snart</a>
-        <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/css/">uppdaterar snart</a>
-        <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/js/">uppdaterar snart</a>
+  <ul class="flex-container">
+    <li class="flex-item">Melwins Nyheter</li>
+
+<div class="dropdown">
+  <span>dropdown</span>
+  <div class="dropdown-content">
+  <a class="dropdown-content-ind" href="http://127.0.0.1:5500/ProjektWebbutveckling/sport.html/">uppdaterar snart</a>
+  <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/css/">uppdaterar snart</a>
+  <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/js/">uppdaterar snart</a>
+  </div>
+  </div>
+ 
+
+  <div class="container">
+        <!-- Här kan du lägga till dina nyhetsartiklar -->
+        <div class="news-article">
+            <h2>Titel på nyhetsartikel 1</h2>
+            <p>Beskrivning av nyhetsartikel 1.</p>
         </div>
+        <div class="news-article">
+            <h2>Titel på nyhetsartikel 2</h2>
+            <p>Beskrivning av nyhetsartikel 2.</p>
         </div>
-       
+        <!-- Du kan lägga till fler artiklar här -->
+    </div>
+</body>
+  
+ 
  <button class="open-button" onclick="openForm()">Logga in</button>
  <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
