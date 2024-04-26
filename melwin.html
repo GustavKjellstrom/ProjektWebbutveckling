@@ -6,60 +6,54 @@
 <title>MelwinsNyheter</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
 <div class="dropdown">
   <span>dropdown</span>
   <div class="dropdown-content">
-  <a class="dropdown-content-ind" href="http://127.0.0.1:5500/ProjektWebbutveckling/sport.html/">sport</a>
-  <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/css/">världen</a>
-  <a class="dropdown-content-ind" href="https://htmlcheatsheet.com/js/">sverige</a>
+    <a class="dropdown-content-ind" href="sport.html">Sport</a>
+    <a class="dropdown-content-ind" href="varlden.html">Världen</a>
+    <a class="dropdown-content-ind" href="sverige.html">Sverige</a>
   </div>
-  </div>
- 
-  <body>
-    <ul class="flex-container">
-      <li class="flex-item">Melwins Nyheter</li>
-  
-
-  <div class="container">
-       
-        <div class="news-article">
-            <h2>Titel på nyhetsartikel 1</h2>
-            <p>Beskrivning av nyhetsartikel 1.</p>
-        </div>
-        <div class="news-article">
-            <h2>Titel på nyhetsartikel 2</h2>
-            <p>Beskrivning av nyhetsartikel 2.</p>
-        </div>
-       
-    </div>
-</body>
-  
- 
- <button class="open-button" onclick="openForm()">Logga in</button>
- <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Logga in</h1>
-  
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-  
-      <label for="psw"><b>Lösenord</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit" class="btn">Logga in</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Stäng</button>
-    </form>
-  </div>
-
-<div>
 </div>
 
-<div >
-    <img class="bilder" src="/" alt="description" height="350" width="auto">
-  
-    </div>
+<ul class="flex-container">
+  <li class="flex-item">Melwins Nyheter</li>
+</ul>
 
+<div class="container">
+  <div class="news-article">
+  <h2>Utanförskapet ökar i städerna</h2>
+  <p>En ny rapport visar att utanförskapet ökar i städerna på grund av höga bostadspriser och svårigheter att hitta arbete.</p>
+</div>
+<div class="news-article">
+  <h2>Nya rön om klimatförändringarna</h2>
+  <p>Forskare har upptäckt att klimatförändringarna kan leda till ännu snabbare smältning av polarisarna än tidigare förutspått.</p>
+</div>
+</div>
+
+
+
+
+<button class="open-button" onclick="openForm()">Logga in</button>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Logga in</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Lösenord</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Logga in</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Stäng</button>
+  </form>
+</div>
+
+<div>
+  <img class="bilder" src="/" alt="description" height="350" width="auto">
+</div>
 
 <script src="script.js"></script>
 </body>
