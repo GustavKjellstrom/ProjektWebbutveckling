@@ -1,6 +1,37 @@
 .button{
-    background-color: rgb(156, 129, 129);
+    background-color: #c6b6b6;
 }
-body{
-    background-color: #f8f8f8;
+
+body {
+        background-color: #9a9393; 
+}
+
+header {
+    background-color: #ffffff; 
+}
+ 
+header nav ul li a {
+    color: #333333; 
+}
+header nav ul li a:hover {
+    color: #000000;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+.featured-products {
+    background-color: #ffffff;
+}
+.product {
+    background-color: #ffffff;
+}
+.product p {
+    color: #666666; 
+}
+
+.product{
+    display: inline-block;
+    background-color: blue;
 }
