@@ -1,3 +1,94 @@
-.button{
-    background-color: red;
+/* Reset default browser styles */
+html, body, header, footer, main, section {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5em;
+    display: inline-block; /* Ensure title and button are on the same line */
+}
+
+.menu-toggle {
+    position: absolute; /* Position the button relative to its closest positioned ancestor */
+    top: 50%; /* Position it in the middle vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    right: 20px; /* Push it to the right */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 20px;
+}
+
+#champions-league-trophy {
+    width: 25%;
+}
+
+#champions-league-trophy img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#introduction,
+#history,
+#impact {
+    margin-bottom: 30px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Show dropdown menu when hamburger button is clicked */
+.menu-toggle.active + .dropdown-menu {
+    display: block;
 }
