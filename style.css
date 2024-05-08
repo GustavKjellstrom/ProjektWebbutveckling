@@ -137,3 +137,20 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+.blue-border {
+background-color:skyblue;
+height: 25vh;
+width: 100%;
+border-top: 4px solid black;
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 10px;
+padding-right: 10px;
+box-sizing: border-box;
+
+}
