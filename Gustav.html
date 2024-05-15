@@ -76,6 +76,40 @@
         a:hover {
             border-bottom: 1px solid #007BFF;
         }
+
+        .poll {
+            margin-top: 40px;
+        }
+
+        .poll label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .poll input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .poll button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .poll button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -176,7 +210,101 @@
                 </div>
             </article>
         </section>
+
+        
+        <section class="poll">
+            <h2>Vote for your favorite player:</h2>
+            <form id="pollForm">
+                <label>
+                    <input type="radio" name="player" value="Lionel Messi">
+                    Lionel Messi
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Pele">
+                    Pele
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Cristiano Ronaldo">
+                    Cristiano Ronaldo
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Diego Maradona">
+                    Diego Maradona
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Johan Cruyff">
+                    Johan Cruyff
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Ronaldo Nazário">
+                    Ronaldo Nazário
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Gheorghe Hagi">
+                    Gheorghe Hagi
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Zinedine Zidane">
+                    Zinedine Zidane
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Ronaldinho">
+                    Ronaldinho
+                </label>
+                <label>
+                    <input type="radio" name="player" value="Paolo Maldini">
+                    Paolo Maldini
+                </label>
+                <button type="button" onclick="submitVote()">Vote</button>
+            </form>
+        </section>
+
+        
+        <section class="result" style="display: none;">
+            <h2>Results:</h2>
+            <div id="resultContainer"></div>
+        </section>
     </div>
+
+    <script>
+        function submitVote() {
+            const form = document.getElementById("pollForm");
+            const selectedPlayer = form.querySelector('input[name="player"]:checked');
+            if (selectedPlayer) {
+                const playerName = selectedPlayer.value;
+                const voteCount = simulateVote(playerName);
+                displayResults(playerName, voteCount);
+                disableInputs();
+            } else {
+                alert("Please select a player to vote.");
+            }
+        }
+
+        function simulateVote(playerName) {
+            return Math.floor(Math.random() * 100) + 1;
+        }
+
+        function displayResults(playerName, voteCount) {
+            const resultContainer = document.getElementById("resultContainer");
+            resultContainer.innerHTML += `<div class="result-item">${playerName}: ${voteCount}%</div>`;
+            document.querySelector('.result').style.display = 'block';
+            const totalVotes = document.querySelectorAll('input[name="player"]').length;
+            let totalPercentage = 0;
+            document.querySelectorAll('.result-item').forEach(item => {
+                const percent = parseFloat(item.innerText.match(/(\d+\.\d+)%/)[1]);
+                totalPercentage += percent;
+            });
+            resultContainer.innerHTML += `<div class="result-item">Total Percentage: ${totalPercentage.toFixed(2)}%</div>`;
+        }
+
+        function disableInputs() {
+            const inputs = document.querySelectorAll('input[name="player"]');
+            inputs.forEach(input => {
+                input.disabled = true;
+            });
+            document.querySelector('button').disabled = true;
+        }
+    </script>
 </body>
 
 </html>
